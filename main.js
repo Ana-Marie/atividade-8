@@ -10,8 +10,8 @@ const document = new DOMParser().parseFromString(fs.readFileSync('res/f-droid.xm
 const isAddedAfter2018AndUpdatedAfter2019 = isValid(R.__, 2018, 2019);
 
 const addedApps = elementsToArray(document.getElementsByTagName('application'))
-    .filter(isAddedAfter2018AndUpdatedAfter2019)//função com side effects em objetos
-    .map(getGitHubProject);// função com side effects em objetos
+    .filter(isAddedAfter2018AndUpdatedAfter2019)//função com side effects em objetos e high-order function
+    .map(getGitHubProject);// função com side effects em objetos e high - order function
 
 console.log(addedApps.join('\n'));
  

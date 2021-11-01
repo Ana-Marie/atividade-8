@@ -1,6 +1,6 @@
 const R = require('ramda');
 
-const contentOfTag = R.curry( // Função curried
+const contentOfTag = R.curry( // Função curried; curry is a  high- order function
     (xmlNode, tagName) => xmlNode.getElementsByTagName(tagName)[0].textContent// declaração de função
 );
 
@@ -17,7 +17,7 @@ const elementsToArray = nodes => { // declaração de função
     return arr;
 };
 
-const isValid = R.curry( // função curried
+const isValid = R.curry( // função curried ;  curry is high order function
     (app, addedAfterYear, updatedAfterYear) => {//declaração de função
         if (!contentOfSource(app).includes('github.com'))
             return false;
